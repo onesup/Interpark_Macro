@@ -9,9 +9,10 @@ import smtplib
 from email.mime.base import MIMEBase
 from email.mime.text import MIMEText
 import sys
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
-from PyQt4 import QtGui, QtCore
+from PyQt5.QtWidgets import *
+from PyQt5.QtCore import *
+from PyQt5.QtGui import *
+
 import time
 
 # 개발자 : 박건희, 오수빈
@@ -120,7 +121,7 @@ if __name__ == '__main__':
     global set
 
 # 입력창 띄우기
-    app = QtGui.QApplication(sys.argv)
+    app = QApplication(sys.argv)
     win = QWidget()
     win.keyPressEvent = esc
 
