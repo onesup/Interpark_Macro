@@ -260,7 +260,7 @@ if __name__ == '__main__':
     try:
     # 인터파크 화면 띄우기
         # 드라이브 객체 생성
-        url = 'C:/chromedriver_win32/chromedriver'  # 드라이브가 있는 경로
+        url = '/usr/local/bin/chromedriver'  # 드라이브가 있는 경로
         driver = webdriver.Chrome(url)
 
         # 인터파크 화면 띄우기
@@ -309,6 +309,7 @@ if __name__ == '__main__':
         log("예매창 띄우기")
 
         # 예매창 객체 받아오기
+        driver.execute_script('javascript:fnBookNoticeShowHide();')
         driver.switch_to.window(driver.window_handles[1])
 
         # 맴버십이십니까? 일반회원입니다.
